@@ -1,4 +1,5 @@
 
+#include "../math/Orbit.h"
 #include "Planet.h"
 
-//static bool Planet::withOrbit = false;
+bool Planet::withOrbit = false;

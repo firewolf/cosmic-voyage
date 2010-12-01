@@ -5,8 +5,8 @@
  *      Author: tmroczkowski
  */
 
-#ifndef PLANET_H_
-#define PLANET_H_
+#ifndef PLANETS_PLANET_H_
+#define PLANETS_PLANET_H_
 
 #include "../mesh/Sphere.h"
 #include "../lib/image/ImageFactory.h"
@@ -49,7 +49,7 @@ public:
 
 	virtual int run (double time) {
 
-		if(drawOrbit /*  && withOrbit */)
+		if(drawOrbit && Planet::withOrbit)
 			this->drawOrbitList();
 
 		Vector3<float> coord = orbit->generateOrbit(pd, time);

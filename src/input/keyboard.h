@@ -75,8 +75,8 @@ class Keyboard {
 		    }
 
 		    //straigth right/left
-		    if(keystates['d']) moving->moveAndRotate(keystates, deltaMove/8,-1, 1);
-		    if(keystates['a']) moving->moveAndRotate(keystates, deltaMove/8, 1,-1);
+		    if(keystates['d']) moving->moveAndRotate(keystates, deltaMove/8.,-1, 1);
+		    if(keystates['a']) moving->moveAndRotate(keystates, deltaMove/8., 1,-1);
 
 		    //rotate in place
 		    if(keystates['e']) moving->rotate(deltaAngle * 8, .0f, .0f, 1.0f, 1);
@@ -98,10 +98,23 @@ class Keyboard {
 				moving->move(tdeltaMove, .0f, .0f, 1.0f, 1);
 			}
 
+			if(keystates['o']) {
+
+
+			}
+
 
 		}
 
+		void oKeyAction() {
+			Planet::withOrbit = !Planet::withOrbit;
+			cout << "orbit switch off requested " << Planet::withOrbit << endl;
+		}
+
 		void handleKeypress(unsigned char key, int xX, int yY) {
+
+			if(key == 'o') oKeyAction();
+
 		    keystates[key] = true;
 		}
 

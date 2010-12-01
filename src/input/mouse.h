@@ -52,8 +52,8 @@ class Mouse {
 
 		void motion(int x, int y) {
 
-			int dx = x - lastx;
-			int dy = y - lasty;
+			int dx = (x - lastx);
+			int dy = (y - lasty);
 			lastx = x; lasty = y;
 
 			if(warpCheck == 1) {
