@@ -49,7 +49,7 @@ public:
 
 	virtual int run (double time) {
 
-		if(drawOrbit && withOrbit)
+		if(drawOrbit /*  && withOrbit */)
 			this->drawOrbitList();
 
 		Vector3<float> coord = orbit->generateOrbit(pd, time);
