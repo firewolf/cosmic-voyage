@@ -1,0 +1,11 @@
+CC=g++
+CFLAGS=-Wall
+LDFLAGS=solar-system.cpp ./planets/Planet.cpp ./math/Orbit.cpp ./lib/drawing.cpp ./lib/Colors.cpp ./math/Math.cpp /usr/lib/libjpeg.a /usr/lib/libpng.a /usr/lib/libpng.so -lGLU -lglut
+
+all: solar
+
+solar:
+	$(CC) $(CFLAGS) $(LDFLAGS) -o solar-system
+	
+clean:
+	rm -f solar-system
