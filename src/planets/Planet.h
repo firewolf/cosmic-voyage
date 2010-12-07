@@ -33,7 +33,9 @@ public:
     ImageFactory *imageFactory;
     static bool withOrbit;
 
-	Planet() {this->construct();};
+	Planet() {
+		this->construct();
+	};
 
 	Planet(PlanetData *pd, bool drawOrbit = true) : drawOrbit(drawOrbit) {
 

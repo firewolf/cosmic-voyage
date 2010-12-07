@@ -98,12 +98,7 @@ class Keyboard {
 				moving->move(tdeltaMove, .0f, .0f, 1.0f, 1);
 			}
 
-			if(keystates['o']) {
-
-
-			}
-
-
+			if(keystates['o']) {}
 		}
 
 		void oKeyAction() {
